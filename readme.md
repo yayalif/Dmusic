@@ -10,7 +10,6 @@ npm install
 
 supervisor bin/www
 
-npm run build --report
 ```
 
 ## API

@@ -1,0 +1,100 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: black;
+  color: #fff;
+}
+ul, li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+a {
+  color: #00B7FF;
+}
+
+header {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 150px;
+  text-align: center;
+  border: 1px #fff solid;
+}
+.left {
+  position: absolute;
+  top: 170px;
+  left: 10px;
+  width: 20%;
+  height: calc(100vh - 200px);
+  border: 1px #fff solid;
+}
+.right {
+  position: absolute;
+  top: 170px;
+  left: 25%;
+  right:10%;
+  width: 72%;
+  height: calc(100vh - 200px);
+  border: 1px #fff solid;
+}
+li {
+  cursor: pointer;
+}
+li:active {
+  background: #00B7FF
+}
+.selected{
+  background-color: #666;
+}
+.type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.type li{
+  border: #fff 1px solid;
+}
+#volume::before{
+  display: block;
+  content: "volumn";
+  position: absolute;
+  top:-6px;
+  left:-50px;
+}
+@media screen and (max-width: 800px),
+       screen and (max-height: 500px)
+{
+  header {
+    height: 100px;
+  }
+  height h1{
+    font-size: 16px;
+  };
+}
+
+
+input[type=range]{ 
+  margin-top: 8px;
+        outline: none; 
+  -webkit-appearance: none;/*清除系统默认样式*/  
+  /* width:56% !important;   */
+  background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;  
+  background-size: 30% 100%;/*设置左右宽度比例*/  
+  height: 3px;/*横条的高度*/  
+  position:relative;
+} 
+/*拖动块的样式*/  
+input[type=range]::-webkit-slider-thumb {  
+  -webkit-appearance: none;/*清除系统默认样式*/  
+  height:16px;/*拖动块高度*/  
+  width: 16px;/*拖动块宽度*/  
+  background: #fff;/*拖动块背景*/  
+  border-radius: 50%; /*外观设置为圆形*/  
+  border: solid 1px #ddd; /*设置边框*/
+}
